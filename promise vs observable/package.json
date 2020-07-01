@@ -1,0 +1,14 @@
+{
+	"name": "promise-vs-observable",
+	"version": "1.0.0",
+	"description": "",
+	"main": "app.js",
+	"scripts": {
+		"start": "node -r esm app.js"
+	},
+	"author": "Waqqar Suleman",
+	"license": "ISC",
+	"dependencies": {
+		"rxjs": "^6.5.5"
+	}
+}
