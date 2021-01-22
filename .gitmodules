@@ -1,0 +1,3 @@
+[submodule "2fa-speakeasy-example"]
+	path = 2fa-speakeasy-example
+	url = https://github.com/jkithome/2fa-speakeasy-example.git
