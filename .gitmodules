@@ -1,3 +1,6 @@
 [submodule "2fa-speakeasy-example"]
 	path = 2fa-speakeasy-example
 	url = https://github.com/jkithome/2fa-speakeasy-example.git
+[submodule "express-jwt-authentication-starter"]
+	path = express-jwt-authentication-starter
+	url = https://github.com/Waqqars987/express-jwt-authentication-starter.git
