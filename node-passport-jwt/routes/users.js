@@ -6,6 +6,7 @@ const passport = require('passport');
 const utils = require('../lib/utils');
 
 router.get('/protected', passport.authenticate('jwt', { session: false }), (req, res, next) => {
+	console.log(req.user);
 	res.status(200).json({ success: true, msg: 'You are successfully authenticated to this route!' });
 });
 
@@ -35,10 +36,8 @@ router.post('/login', function (req, res, next) {
 // Register a new user
 router.post('/register', function (req, res, next) {
 	const saltHash = utils.genPassword(req.body.password);
-
 	const salt = saltHash.salt;
 	const hash = saltHash.hash;
-
 	const newUser = new User({
 		username: req.body.username,
 		hash,
