@@ -48,18 +48,17 @@ function genPassword(password) {
  * @param {*} user - The user object.  We need this to set the JWT `sub` payload property to the MongoDB user ID
  */
 function issueJWT(user) {
-	const userId = user._id;
 	// const expiresIn = '1d';
 	const payload = {
-		userId,
+		sub: user._id,
 		iat: Date.now(),
 	};
 
 	const signedToken = jsonwebtoken.sign(payload, PRIV_KEY, {
-		// expiresIn,
 		algorithm: 'RS256',
 		issuer: 'Waqqar Suleman',
 		audience: 'Devs',
+		// expiresIn,
 	});
 
 	return {

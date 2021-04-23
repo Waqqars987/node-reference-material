@@ -23,8 +23,8 @@ module.exports = passport => {
 	passport.use(
 		new JwtStrategy(options, function (jwtPayload, done) {
 			console.log(jwtPayload);
-			// We will assign the `userId` property on the JWT to the database ID of user
-			User.findOne({ _id: jwtPayload.userId }, function (err, user) {
+			// We will assign the `sub` property on the JWT to the database ID of user
+			User.findOne({ _id: jwtPayload.sub }, function (err, user) {
 				if (err) {
 					return done(err, false);
 				}

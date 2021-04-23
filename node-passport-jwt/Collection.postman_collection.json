@@ -1,0 +1,127 @@
+{
+	"info": {
+		"_postman_id": "a71c75ca-97d3-4f2c-b5b3-98f54cbd852e",
+		"name": "Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:3000/users/register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\":\"Tyrion\",\n    \"password\":\"123456\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/users/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/users/login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\":\"Tyrion\",\n    \"password\":\"123456\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/users/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/users/admin",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2MDgyNmRlNTE1NTJhZDE4OTI4NmQ1MWEiLCJpYXQiOjE2MTkxNjA1NjMyNzksImF1ZCI6IkRldnMiLCJpc3MiOiJXYXFxYXIgU3VsZW1hbiJ9.qV25RQQvCDVPChMB71mZARHhnk1wMLTzz7wppq1xjxL3oBOwuV-gbgru5gqD5OXEiPNKfDVtfs_Bjzg51f2kWGuKl4C0Hy74Lhrsk8E6wGbjSQ32aPHOeh0dlX9z_cMWyFNBXSYOiHJmZxeWzegjIFU4Er-dFzsQoZGvyyMj60OX571XJ-b7KCs003QqOPaMmbhu1_iR3kgmrqZXX7vWvBFGwllkUJQaECGl0JCFK_Lggx3YdTjxx51ztXXqm9IGQfB_eHB7i8WMaTTEzhTy7gU99N9zqopU5WgDNeBfgjABc4OLJPn1qjFPwzb-bRp_yqgL0O5AqPDNuSiUjuuFIfX62_GWJK8qqiVvZOx4AM5woptD09E1KhiW0Q3KJYPmHonloM9zPWoR0sbw7I02UZ-bMtc2gCUh8MtldQ1DVDOVtFHLskLwB9ImMe9cZmudIPRpqC10fQSXrp0LgPevZAgbF09yimzYzfQf7-dFyyW55uyVzoDNWQ3Mb0Fjb8Oz42nGBIfd-dYXd8kbVXRNbz1oz5AK6qobKPs5gLTo-H1lXjXckzw9-Ynz2uQxRIpz-vJIx5HBFlYtMLhXqSnj_i2PleDYdFdAJzN6OhSEvxLjMlALynUe0fNjKkjPdbWESiibvq9b8qC7z_Q16s0enXk4s7wRM8bns8I404kX9H8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/users/admin",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"admin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/users/user",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2MDgyNmRlNTE1NTJhZDE4OTI4NmQ1MWEiLCJpYXQiOjE2MTkxNjA1NjMyNzksImF1ZCI6IkRldnMiLCJpc3MiOiJXYXFxYXIgU3VsZW1hbiJ9.qV25RQQvCDVPChMB71mZARHhnk1wMLTzz7wppq1xjxL3oBOwuV-gbgru5gqD5OXEiPNKfDVtfs_Bjzg51f2kWGuKl4C0Hy74Lhrsk8E6wGbjSQ32aPHOeh0dlX9z_cMWyFNBXSYOiHJmZxeWzegjIFU4Er-dFzsQoZGvyyMj60OX571XJ-b7KCs003QqOPaMmbhu1_iR3kgmrqZXX7vWvBFGwllkUJQaECGl0JCFK_Lggx3YdTjxx51ztXXqm9IGQfB_eHB7i8WMaTTEzhTy7gU99N9zqopU5WgDNeBfgjABc4OLJPn1qjFPwzb-bRp_yqgL0O5AqPDNuSiUjuuFIfX62_GWJK8qqiVvZOx4AM5woptD09E1KhiW0Q3KJYPmHonloM9zPWoR0sbw7I02UZ-bMtc2gCUh8MtldQ1DVDOVtFHLskLwB9ImMe9cZmudIPRpqC10fQSXrp0LgPevZAgbF09yimzYzfQf7-dFyyW55uyVzoDNWQ3Mb0Fjb8Oz42nGBIfd-dYXd8kbVXRNbz1oz5AK6qobKPs5gLTo-H1lXjXckzw9-Ynz2uQxRIpz-vJIx5HBFlYtMLhXqSnj_i2PleDYdFdAJzN6OhSEvxLjMlALynUe0fNjKkjPdbWESiibvq9b8qC7z_Q16s0enXk4s7wRM8bns8I404kX9H8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/users/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"user"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
