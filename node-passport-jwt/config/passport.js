@@ -13,6 +13,8 @@ const options = {
 	secretOrKey: PUB_KEY,
 	algorithms: ['RS256'],
 	ignoreExpiration: true,
+	issuer: 'Waqqar Suleman',
+	audience: 'Devs',
 };
 
 // app.js will pass the global passport object here, and this function will configure it
@@ -20,7 +22,7 @@ module.exports = passport => {
 	// The JWT payload is passed into the verify callback
 	passport.use(
 		new JwtStrategy(options, function (jwtPayload, done) {
-			// console.log(jwtPayload);
+			console.log(jwtPayload);
 			// We will assign the `userId` property on the JWT to the database ID of user
 			User.findOne({ _id: jwtPayload.userId }, function (err, user) {
 				if (err) {

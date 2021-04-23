@@ -58,6 +58,8 @@ function issueJWT(user) {
 	const signedToken = jsonwebtoken.sign(payload, PRIV_KEY, {
 		// expiresIn,
 		algorithm: 'RS256',
+		issuer: 'Waqqar Suleman',
+		audience: 'Devs',
 	});
 
 	return {

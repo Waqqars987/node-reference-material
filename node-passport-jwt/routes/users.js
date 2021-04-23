@@ -4,8 +4,20 @@ const User = mongoose.model('User');
 const passport = require('passport');
 
 const utils = require('../lib/utils');
+const { isAdmin } = require('../middleware/auth');
 
-router.get('/protected', passport.authenticate('jwt', { session: false }), (req, res, next) => {
+router.get(
+	'/admin',
+	passport.authenticate('jwt', { session: false }),
+	isAdmin,
+	(req, res, next) => {
+		res
+			.status(200)
+			.json({ success: true, msg: 'You are successfully authenticated as ADMIN to this route!' });
+	}
+);
+
+router.get('/user', passport.authenticate('jwt', { session: false }), (req, res, next) => {
 	console.log(req.user);
 	res.status(200).json({ success: true, msg: 'You are successfully authenticated to this route!' });
 });
@@ -38,10 +50,12 @@ router.post('/register', function (req, res, next) {
 	const saltHash = utils.genPassword(req.body.password);
 	const salt = saltHash.salt;
 	const hash = saltHash.hash;
+
 	const newUser = new User({
-		username: req.body.username,
 		hash,
 		salt,
+		username: req.body.username,
+		role: req.body.role || 'USER',
 	});
 
 	try {
