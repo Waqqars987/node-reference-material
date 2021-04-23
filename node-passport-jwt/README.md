@@ -12,12 +12,12 @@ DB_STRING=<your db string>
 DB_STRING_PROD=<your db string>
 ```
 
-You will also need to start the Mongo DB database using the `mongod` process. I run this process persistently in the background, but you could also just type `mongod` in your terminal (assuming you have Mongo DB installed).
+You will also need to start the Mongo DB database using the `mongod` process. I run this process persistently in the background, but you could also just type `mongod` in your terminal (assuming you have Mongo DB installed). Altenatively, you can Mongo Atlas URI String.
 
 Next, you will need to generate a public/private keypair. The `.gitignore` automatically ignores the private key.
 
 ```
-node generateKeypair.js
+node generateKeypair.js or yarn instate
 ```
 
 Note that to run the script, you will need a NodeJS version greater than v10.x.
