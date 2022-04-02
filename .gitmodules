@@ -4,3 +4,6 @@
 [submodule "express-jwt-authentication-starter"]
 	path = express-jwt-authentication-starter
 	url = https://github.com/Waqqars987/express-jwt-authentication-starter.git
+[submodule "node-api-proxy-server"]
+	path = node-api-proxy-server
+	url = https://github.com/bradtraversy/node-api-proxy-server.git
