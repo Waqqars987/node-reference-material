@@ -1,0 +1,25 @@
+{
+	"name": "current-project",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"devStart": "nodemon server.js",
+		"devStartAuth": "nodemon authServer.js",
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"dev": "concurrently --kill-others --names \"main,auth\" -c \"magenta,blue\" \"yarn devStart\" \"yarn devStartAuth\""
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"dotenv": "^16.0.3",
+		"express": "^4.17.1",
+		"ioredis": "^5.3.2",
+		"jsonwebtoken": "^9.0.0"
+	},
+	"devDependencies": {
+		"concurrently": "^8.0.1",
+		"nodemon": "^2.0.22"
+	}
+}
