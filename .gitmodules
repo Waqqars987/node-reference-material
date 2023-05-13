@@ -7,3 +7,6 @@
 [submodule "node-api-proxy-server"]
 	path = node-api-proxy-server
 	url = https://github.com/bradtraversy/node-api-proxy-server.git
+[submodule "Testing-Express-REST-API"]
+	path = Testing-Express-REST-API
+	url = https://github.com/TomDoesTech/Testing-Express-REST-API.git
