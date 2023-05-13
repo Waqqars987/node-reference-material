@@ -10,3 +10,6 @@
 [submodule "Testing-Express-REST-API"]
 	path = Testing-Express-REST-API
 	url = https://github.com/TomDoesTech/Testing-Express-REST-API.git
+[submodule "REST-API-Tutorial-Updated"]
+	path = REST-API-Tutorial-Updated
+	url = https://github.com/TomDoesTech/REST-API-Tutorial-Updated.git
